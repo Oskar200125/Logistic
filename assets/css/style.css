@@ -1,0 +1,1334 @@
+/*==========Урок 1==========*/
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+.img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+body{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #585858;
+    background-color: #fff;
+}
+
+body.no-scroll{
+    overflow: hidden;
+}
+
+.container{
+    width: 100%;
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*Header*/
+.header{
+    width: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    transition: background .2s linear;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header--dark{
+    background-color: rgba(0, 0, 0, .9);
+}
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+}
+
+.nav{
+    display: flex;
+    height: 100%;
+    font-size: 15px;
+}
+
+.nav__link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 15px;
+    position: relative;
+    transition: all .2s linear;
+}
+
+.nav__link:not(.active):hover{
+    color: #FC2C2B;
+}
+
+.nav__link.active{
+    background-color: #004AF2;
+}
+
+.burger{
+    display: none;
+    background: none;
+    border: none;
+}
+
+
+/*==========Урок 2==========*/
+/*Intro*/
+.intro{
+    margin-bottom: 30px;
+
+    background: #000 url(..//images/intro-bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.intro--blog{
+    height: 350px;
+    background: #000 url(..//images/blog-bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.intro--text{
+    height: 350px;
+    background: #000 url(..//images/text-bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.intro__inner{
+    height: 600px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.intro__text{
+    margin-bottom: 45px;
+    text-align: right;
+}
+
+.intro__countries{
+    font-size: 15px;
+    color: #fff;
+}
+
+.intro__title{
+    position: relative;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 110px;
+    font-weight: 700;
+    line-height: 0.9;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.intro__title-amp{
+    font-size: 170px;
+    line-height: 1;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Request form */
+.request-form{
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+
+    background-color: #004AF2;
+    border-radius: 5px;
+}
+
+.request-form--intro{
+    position: relative;
+    bottom: -30px;
+}
+
+.request-form--right{
+    margin-left: auto;
+}
+
+.request-form__header{
+    padding: 20px 30px;
+    background-color: #033FC9;
+}
+
+.request-form__title{
+    margin-bottom: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: #fff;
+}
+
+.request-form__text{
+    font-size: 15px;
+    color: #fff;
+}
+
+.request-form__content{
+    padding: 30px;
+}
+
+/* Form */
+.form__group{
+    margin-bottom: 25px;
+}
+
+.input{
+    display: block;
+    width: 100%;
+    padding-bottom: 12px;
+    padding-left: 50px;
+
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    transition: border-color .1s linear;
+}
+
+.input::placeholder{
+    color: #fff;
+}
+
+.input:focus{
+    outline: none;
+    border-bottom-color: #fff;
+}
+
+.input--user{
+    background: url("../images/user-icon.svg") left 15px top 5px no-repeat;
+}
+
+.input--phone{
+    background: url("../images/phone-icon.svg") left 15px top 5px no-repeat;
+}
+
+.input--email{
+    background: url("../images/mail-icon.svg") left 15px top 6px no-repeat;
+}
+
+.input--dark{
+    color: #2C2C2C;
+    border-bottom-color: #E8E8E8;
+}
+
+.input--dark::placeholder{
+    color: #2C2C2C;
+}
+
+.input--dark:focus{
+    border-bottom-color: #000;
+}
+
+.input--dark.input--user{
+    background-image: url(../images/user-black-icon.svg);
+}
+
+.input--dark.input--phone{
+    background-image: url(../images/phone-black-icon.svg);
+}
+
+.input--dark.input--email{
+    background-image: url(../images/mail-black-icon.svg);
+}
+
+/* Btn */
+.btn{
+    display: inline-block;
+    padding: 15px 45px;
+    position: relative;
+    overflow: hidden;
+
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.1;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    vertical-align: middle;
+
+    background: #FF903E;
+    border: 0;
+    border-radius: 5px;
+}
+
+.btn:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity .2s linear;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.btn span{
+    position: relative;
+    z-index: 2;
+}
+
+.btn:hover:before{
+    opacity: .15;
+}
+
+.btn--block{
+    display: block;
+    width: 100%;
+}
+
+.btn--orange{
+    background-image: linear-gradient(to right, #FF903E, #FF2C2C);
+}
+
+.btn--shadow{
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+}
+
+/*==========Урок 3==========*/
+/*Services*/
+.section{
+    padding: 60px 0;
+}
+
+.section--map{
+    background: url(../images/map.svg) no-repeat left 100px top 140px;
+}
+
+.section--gray{
+    background-color: #F9F9F9;
+}
+
+.section__title{
+    font-family: 'Lato', sans-serif;
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #2C2C2C;
+    margin-bottom: 40px;
+}
+
+.section__title span{
+    color: #004AF2;
+}
+
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .2);
+    padding: 30px 0 50px;
+
+    position: relative;
+}
+
+.services__main-title{
+    position: absolute;
+    right: 30px;
+    bottom: 12px;
+    z-index: 1;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 1;
+    color: rgba(44, 44, 44, 0.05);
+    pointer-events: none;
+}
+
+.services__item{
+    width: 25%;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.services__title{
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #2C2C2C;
+}
+
+.services__text{
+    font-size: 15px;
+    color: #585858;
+    margin: 20px 0;
+}
+
+.services__footer{
+    margin-top: auto;
+}
+
+.services__link{
+    display: inline-block;
+    font-size: 15px;
+    color: #004AF2;
+    text-decoration: none;
+    transition: color .2s linear;
+}
+
+.services__link:after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 3px;
+    background-color: #004AF2;
+    margin-top: 5px;
+    transition: width .2s linear;
+}
+
+.services__link:hover{
+    color: #FF3E2F;
+}
+
+.services__link:hover:after{
+    width: 100%;
+    background-color: #FF3E2F;
+}
+
+/*==========Урок 4==========*/
+/*Clients*/
+.clients{
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.clients__logos{
+    width: 60%;
+}
+
+.clients__list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.clients__list li{
+    margin-right: 50px;
+    margin-bottom: 40px;
+}
+
+.clients__reviews{
+    width: 40%;
+}
+
+.clients-love{
+    display: inline-block;
+    min-height: 47px;
+    padding-top: 7px;
+    margin-left: 40px;
+    background: url(../images/heart.svg) no-repeat left 19px top;
+
+    font-size: 18px;
+    line-height: 1.2;
+    color: #464646;
+}
+
+/*Reviews*/
+.reviews{
+    position: relative;
+}
+
+.reviews:before{
+    content: "";
+    display: block;
+    width: 92px;
+    height: 126px;
+    background: url(../images/lines.svg) no-repeat;
+
+    position: absolute;
+    top: -15px;
+    left: 2px;
+    z-index: 1;
+}
+
+.reviews__header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.reviews__photo{
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+}
+
+.reviews__inner{
+    padding-left: 20px;
+    flex-grow: 1;
+    font-family: 'Lato', sans-serif;
+}
+
+.reviews__name{
+    font-size: 18px;
+    font-weight: 900;
+    color: #2C2C2C;
+}
+
+.reviews__company{
+    font-size: 15px;
+    color: #2C2C2C;
+}
+
+.reviews__content{
+    font-size: 15px;
+    line-height: 1.8;
+    color: #585858;
+}
+
+.reviews__content p{
+    margin-bottom: 20px;
+    text-indent: 20px;
+}
+
+.reviews__content p:last-child{
+    margin-bottom: 0;
+}
+
+/*==========Урок 5==========*/
+/*Benefits*/
+
+.benefits{
+    display: flex;
+}
+
+.benefits__col{
+    width: 50%;
+}
+
+.benefits-list{
+    width: 100%;
+    max-width: 370px;
+    padding-left: 50px;
+    position: relative;
+
+    background-image: linear-gradient(to bottom, #fff 40%, #A5A5A5 40%);
+    background-size: 2px 35px;
+    background-repeat: repeat-y;
+    background-position: left 12px top -4px;
+}
+
+.benefits-list:before,
+.benefits-list:after{
+    content: "";
+    display: block;
+    width: 26px;
+    height: 36px;
+
+    background-color: #fff;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.benefits-list:before{
+    background-image: url(../images/pin-start.svg);
+
+    top: -4px;
+}
+
+.benefits-list:after{
+    background-image: url(../images/pin-end.svg);
+
+    bottom: -4px;
+}
+
+.benefits-list__item:not(:last-child){
+    margin-bottom: 35px;
+}
+
+.benefits-list__title{
+    margin-bottom: 12px;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 21px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #2C2C2C;
+}
+
+.benefits-list__text{
+    font-size: 15px;
+    color: #585858;
+}
+
+/*==========Урок 6==========*/
+/*Team*/
+
+.team{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.team__col{
+    margin-bottom: 30px;
+
+    width: 33.33333%;
+    padding: 0 15px;
+}
+
+.team__photo{
+    margin-bottom: 13px;
+
+    box-shadow: 10px 5px 13px rgba(0, 0, 0, .16);
+}
+
+.team__name{
+    margin-bottom: 5px;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #2C2C2C;
+}
+
+.team__prof{
+    margin-bottom: 11px;
+    font-size: 15px;
+    color: #585858;
+}
+
+.team__contacts{
+    font-size: 14px;
+    line-height: 1.2;
+    color: #585858;
+}
+
+.team__contacts li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+.team__contacts-icon{
+    width: 16px;
+    height: auto;
+    margin-right: 7px;
+}
+
+.team__contacts a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.team__contacts a:hover{
+    text-decoration: underline;
+}
+
+/*==========Урок 7==========*/
+/*Mission*/
+
+.mission-title{
+    font-family: 'Lato', sans-serif;
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 1;
+    color: rgba(0, 0, 0, .05);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.mission{
+    padding: 60px 30px;
+    margin-top: -23px;
+    margin-bottom: 30px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .16);
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.mission__title{
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #004AF2;
+}
+
+.mission__subtitle{
+    font-size: 21px;
+    line-height: 1.2;
+    color: #585858;
+}
+
+.mission:before,
+.mission:after{
+    content: "";
+    display: block;
+    width: 41.66666%;
+    height: 2px;
+
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.mission:before{
+    background-color: #004AF2;
+    right: 50%;
+}
+
+.mission:after{
+    background-color: #FC2C2B;
+    left: 50%;
+}
+
+/*==========Урок 8==========*/
+/*Article*/
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.articles--column{
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.articles--column .articles__item{
+    max-width: none;
+    margin-bottom: 45px;
+}
+
+.articles__item{
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.articles__title{
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2C2C2C;
+}
+
+.articles__title a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.articles__title a:hover{
+    text-decoration: underline;
+}
+
+.articles__text{
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #585858;
+}
+
+.articles__date{
+    display: block;
+    font-size: 12px;
+    color: #6E6E6E;
+}
+
+/*==========Урок 9==========*/
+/*Footer*/
+.footer{
+    padding: 40px 0;
+    margin-top: 60px;
+    background-color: #F9F9F9;
+    background-image:
+        url(../images/tire-left.svg),
+        url(../images/tire-right.svg);
+    background-repeat: no-repeat;
+    background-position: left -50px bottom -80px, right -50px bottom -80px;
+    text-align: center;
+}
+
+.footer__contact{
+    margin: 25px 0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.footer__contact a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer__contact a:hover{
+    text-decoration: underline;
+}
+
+.footer__nav{
+    font-size: 12px;
+    color: #004AF2;
+}
+
+.footer__nav a{
+    margin-right: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer__nav a:last-child{
+    margin-right: 0;
+}
+
+.footer__nav a:hover{
+    text-decoration: underline;
+}
+
+/*==========Урок 10==========*/
+/*Modals*/
+.modal{
+    display: none;
+    padding: 30px 15px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    overflow-y: auto;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+.modal.show{
+    display: flex;
+}
+
+.modal__inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.modal__content{
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    background-color: #fff;
+    position: relative;
+}
+
+.modal__header{
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.modal__icon{
+    margin-bottom: 10px;
+}
+
+.modal__title{
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #004AF2;
+}
+
+.modal__text{
+    font-size: 15px;
+    color: #2C2C2C;
+}
+
+.modal__footer{
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #E8E8E8;
+    text-align: center;
+}
+
+.modal__footer-title{
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: #2C2C2C;
+}
+
+.modal__contacts{
+    font-size: 15px;
+    font-style: normal;
+    color: #2C2C2C;
+    line-height: 1.6;
+}
+
+.modal__contacts a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.modal__contacts a:hover{
+    text-decoration: underline;
+}
+
+.modal__close{
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform .2s linear;
+
+    position: absolute;
+    top: -20px;
+    right: -30px;
+    z-index: 1;
+}
+
+.modal__close:hover{
+    transform: rotate(90deg);
+}
+
+.modal__close img{
+    display: block;
+}
+
+/*==========Урок 11==========*/
+/*Main*/
+.main{
+    display: flex;
+    margin: 0 -15px;
+}
+
+.main__col{
+    width: 50%;
+    padding: 0 15px;
+}
+
+/*==========Урок 12==========*/
+/*Text*/
+.text{
+    max-width: 890px;
+    margin-bottom: 50px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #585858;
+}
+
+.text h2{
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2C2C2C;
+}
+
+.text p{
+    margin-bottom: 20px;
+}
+
+.text ul,
+.text ol{
+    margin-bottom: 20px;
+}
+
+.text ol{
+    list-style: decimal;
+    list-style-position: inside;
+}
+
+/*==========Урок 13==========*/
+/*Media*/
+@media (max-width: 991px){
+    /* Intro */
+    .intro--blog,
+    .intro--text{
+        height: 250px;
+    }
+
+    .intro__title {
+        font-size: 90px;
+    }
+
+    .intro__title-amp {
+        font-size: 120px;
+
+        right: auto;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* Section */
+    .section__title{
+        text-align: center;
+    }
+
+    .section--map{
+        background-position: center top 0;
+    }
+
+    /* Services */
+    .services__item{
+        width: 50%;
+    }
+
+    /* Clients */
+    .clients{
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .clients__logos,
+    .clients__reviews{
+        width: 100%;
+    }
+
+    .clients__logos{
+        margin-bottom: 50px;
+    }
+
+    .clients__list{
+        justify-content: center;
+    }
+
+    .clients__list li{
+        max-width: 130px;
+    }
+
+    /* Footer */
+    .footer {
+        background-size: 330px auto;
+        background-position: left -30px bottom -30px,
+        right -30px bottom -30px;
+    }
+
+    /*Main*/
+    .main__col--left{
+        width: 55%;
+    }
+
+    .main__col--right{
+        width: 45%;
+    }
+}
+
+@media (max-width: 767px){
+
+    /*Header*/
+    .header__inner{
+        height: 50px;
+    }
+
+    .nav{
+        display: none;
+        flex-direction: column;
+        height: auto;
+        min-height: calc(100vh - 50px);
+        width: 100%;
+        padding-top: 10px;
+        background-color: rgba(38, 38, 38, .9);
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .nav__link{
+        display: block;
+        padding: 10px 15px;
+        text-align: right;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    /*Intro*/
+    .intro{
+        margin-bottom: 0;
+    }
+
+    .intro__inner{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding-top: 75px;
+        padding-bottom: 25px;
+    }
+
+    .intro__text{
+        order: 1;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .intro__title{
+        font-size: 70px;
+    }
+
+    .intro__title-amp{
+        font-size: 100px;
+    }
+
+    .request-form--intro{
+        order: 2;
+        position: static;
+    }
+
+    /* Benefits */
+    .benefits{
+        flex-direction: column;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .benefits__col{
+        width: 100%;
+    }
+
+    .benefits-list{
+        margin-bottom: 30px;
+        max-width: none;
+    }
+
+    /* Team */
+    .team{
+        flex-direction: column;
+    }
+
+    .team__col{
+        width: 100%;
+    }
+
+    .team__col:last-child{
+        margin-bottom: 0;
+    }
+
+    .team__item{
+        max-width: 370px;
+        margin: 0 auto;
+    }
+
+    /* Mission */
+    .mission-title{
+        font-size: 70px;
+    }
+
+    .mission{
+        padding: 40px 20px;
+        margin-top: -16px;
+    }
+
+    .mission__title{
+        font-size: 24px;
+    }
+
+    .mission__subtitle{
+        font-size: 18px;
+    }
+
+    /* Articles */
+    .articles{
+       flex-wrap: wrap;
+    }
+
+    .articles__item{
+        max-width: none;
+    }
+
+    /* Footer */
+    .footer{
+        background-size: 250px auto;
+        background-position: left -20px bottom -30px,
+        right -20px bottom -30px;
+    }
+
+    /*Modals*/
+    .modal__content{
+        padding: 15px;
+    }
+
+    .modal__close{
+        right: 0;
+        top: -30px;
+    }
+
+     /*Main*/
+    .main{
+        flex-direction: column;
+    }
+
+    .main__col{
+        width: 100%;
+    }
+
+    /*Request*/
+    .request-form--right{
+        display: none;
+    }
+
+    /*Articles*/
+    .articles--column .articles__item{
+        margin-bottom:
+    }
+}
+
+@media (max-width: 575px){
+
+    /*intro*/
+    .intro__title{
+        font-size: 60px;
+    }
+
+    .intro__title-amp{
+        font-size: 90px;
+    }
+
+    /* Services */
+    .services{
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+
+    .services__main-title{
+        width: 100%;
+
+        font-size: 60px;
+        text-align: center;
+
+        bottom: auto;
+        right: auto;
+        top: 10px;
+    }
+
+    .services__item{
+        width: 100%;
+    }
+
+    /* Section */
+    .section{
+        padding: 20px 0;
+    }
+
+    .section__title{
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+
+    /* Request form */
+    .request-form__header,
+    .request-form__content{
+        padding: 20px;
+    }
+
+    .request-form__title{
+        font-size: 25px;
+    }
+
+    /* Clients */
+    .clients__list{
+        margin: 0 -15px;
+    }
+
+    .clients__list li{
+        max-width: none;
+        width: 33.33333%;
+        margin-right: 0;
+        padding: 0 15px;
+    }
+
+    .clients__list-logo{
+        margin: 0 auto;
+    }
+
+    /* Mission */
+    .mission-title{
+        font-size: 40px;
+    }
+
+    .mission{
+        padding: 30px 20px;
+        margin-top: -10px;
+    }
+
+    .mission__title{
+        font-size: 20px;
+    }
+
+    .mission__subtitle{
+        font-size: 16px;
+    }
+
+    /* Footer */
+    .footer{
+        margin-top: 40px;
+        background-position: left -120px bottom -80px,
+        right -120px bottom -80px;
+    }
+}
+
+@media (max-width: 320px){
+    .intro__title{
+        font-size: 40px;
+    }
+
+    .intro__title-amp{
+        font-size: 50px;
+    }
+}
+
+
+
