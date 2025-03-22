@@ -849,7 +849,7 @@ body.no-scroll{
 }
 
 .modal.show{
-    display: flex;
+    display: block;
 }
 
 .modal__inner{
@@ -865,6 +865,10 @@ body.no-scroll{
     padding: 25px;
     background-color: #fff;
     position: relative;
+
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform .2s ease-out, opacity .2s ease-out;
 }
 
 .modal__header{
@@ -933,6 +937,10 @@ body.no-scroll{
     top: -20px;
     right: -30px;
     z-index: 1;
+}
+
+.modal__close:focus{
+    outline: 0;
 }
 
 .modal__close:hover{
