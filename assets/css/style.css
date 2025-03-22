@@ -1,4 +1,3 @@
-/*==========Урок 1==========*/
 *,
 *:before,
 *:after{
@@ -95,7 +94,6 @@ body.no-scroll{
 }
 
 
-/*==========Урок 2==========*/
 /*Intro*/
 .intro{
     margin-bottom: 30px;
@@ -323,7 +321,6 @@ body.no-scroll{
     box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
 }
 
-/*==========Урок 3==========*/
 /*Services*/
 .section{
     padding: 60px 0;
@@ -428,7 +425,6 @@ body.no-scroll{
     background-color: #FF3E2F;
 }
 
-/*==========Урок 4==========*/
 /*Clients*/
 .clients{
     display: flex;
@@ -534,7 +530,6 @@ body.no-scroll{
     margin-bottom: 0;
 }
 
-/*==========Урок 5==========*/
 /*Benefits*/
 
 .benefits{
@@ -603,9 +598,7 @@ body.no-scroll{
     color: #585858;
 }
 
-/*==========Урок 6==========*/
 /*Team*/
-
 .team{
     display: flex;
     flex-wrap: wrap;
@@ -668,7 +661,6 @@ body.no-scroll{
     text-decoration: underline;
 }
 
-/*==========Урок 7==========*/
 /*Mission*/
 
 .mission-title{
@@ -729,7 +721,6 @@ body.no-scroll{
     left: 50%;
 }
 
-/*==========Урок 8==========*/
 /*Article*/
 .articles{
     display: flex;
@@ -782,7 +773,6 @@ body.no-scroll{
     color: #6E6E6E;
 }
 
-/*==========Урок 9==========*/
 /*Footer*/
 .footer{
     padding: 40px 0;
@@ -832,7 +822,6 @@ body.no-scroll{
     text-decoration: underline;
 }
 
-/*==========Урок 10==========*/
 /*Modals*/
 .modal{
     display: none;
@@ -951,7 +940,6 @@ body.no-scroll{
     display: block;
 }
 
-/*==========Урок 11==========*/
 /*Main*/
 .main{
     display: flex;
@@ -963,7 +951,6 @@ body.no-scroll{
     padding: 0 15px;
 }
 
-/*==========Урок 12==========*/
 /*Text*/
 .text{
     max-width: 890px;
@@ -994,7 +981,6 @@ body.no-scroll{
     list-style-position: inside;
 }
 
-/*==========Урок 13==========*/
 /*Media*/
 @media (max-width: 991px){
     /* Intro */
