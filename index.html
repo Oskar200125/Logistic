@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>CenterLogistic</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|PT+Sans&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -36,6 +36,22 @@
 
     <!--Intro-->
     <div class="intro" id="intro">
+
+       <div class="intro__slider" id="introSlider">
+           <div class="slider-item">
+               <div class="intro__slider-item" style="background-image: url(assets/images/intro-bg.jpg)"></div>
+           </div>
+           <div class="slider-item">
+               <div class="intro__slider-item" style="background-image: url(assets/images/slide-2.jpg)"></div>
+           </div>
+           <div class="slider-item">
+               <div class="intro__slider-item" style="background-image: url(assets/images/slide-3.jpg)"></div>
+           </div>
+           <div class="slider-item">
+               <div class="intro__slider-item" style="background-image: url(assets/images/slide-4.jpg)"></div>
+           </div>
+       </div>
+
         <div class="container">
             <div class="intro__inner">
                 <div class="request-form  request-form--intro">
@@ -67,6 +83,11 @@
                         <span class="intro__title-amp">&amp;</span>
                         Trans<br>Logistic
                     </h1>
+                </div>
+
+                <div class="intro__slider-arrows">
+                    <button class="intro__slider-btn  intro__slider-btn--prev" id="introSliderPrev" type="button">Prev</button>
+                    <button class="intro__slider-btn  intro__slider-btn--next" id="introSliderNext" type="button">Next</button>
                 </div>
             </div>
         </div>
